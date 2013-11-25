@@ -1,7 +1,7 @@
 Summary:	X Toolkit library
 Name:		xorg-libXt
 Version:	1.1.4
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXt-%{version}.tar.bz2
@@ -88,7 +88,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXt.so
-%{_libdir}/libXt.la
 %{_includedir}/X11/*.h
 %{_pkgconfigdir}/xt.pc
 %{_mandir}/man3/*.3x*
