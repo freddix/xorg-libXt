@@ -1,7 +1,7 @@
 Summary:	X Toolkit library
 Name:		xorg-libXt
 Version:	1.1.4
-Release:	2
+Release:	3
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXt-%{version}.tar.bz2
@@ -52,6 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 install -d $RPM_BUILD_ROOT%{_datadir}/X11/app-defaults
 install -d $RPM_BUILD_ROOT%{_datadir}/X11/{cs,da,de,es,fr,ja,ko,nl,pl,pt,pt_BR,ru,sv,zh_CN,zh_TW}/app-defaults
